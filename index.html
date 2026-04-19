@@ -202,26 +202,31 @@
       box-shadow:var(--shadow);
     }
 
+.hero-banner {
+  width: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.06);
+  margin-bottom: 28px;
+  background: linear-gradient(90deg, rgba(18,24,33,.92), rgba(12,16,23,.96));
+  box-shadow: var(--shadow);
+}
+
 .hero-banner-title {
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  width:80%;
-  padding:5px;
-  border-radius:10px;
-  border:0;
-  background:transparent;
-  box-shadow:none;
+  width: 100%;
+  padding: 10px;
 }
 
 .hero-banner-title img {
-  display:block;
-  width:90%;
-  height:60px;
-  object-fit:cover;
-  object-position:center;
-  border-radius:10px;
-}
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 160px;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 20px;
+  background: #0b1118;
+}}
 
 @media (max-width: 640px) {
   .hero-banner-title img {

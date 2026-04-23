@@ -31,7 +31,12 @@
     }
 
     * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
+    html, body {
+      width:100%;
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
     body {
       margin:0;
       color:var(--text);
@@ -39,7 +44,6 @@
       background:
         radial-gradient(circle at top right, rgba(239,68,68,.08), transparent 18%),
         linear-gradient(180deg, #262626 0%, #1f1f1f 100%);
-      overflow-x:hidden;
     }
 
     body::before {
@@ -56,7 +60,14 @@
     }
 
     img { max-width:100%; display:block; }
-    .container { width:var(--container); margin:0 auto; position:relative; z-index:1; }
+
+    .container {
+      width:var(--container);
+      margin:0 auto;
+      position:relative;
+      z-index:1;
+    }
+
     .section { padding:42px 0; }
 
     .topbar {
@@ -143,13 +154,12 @@
 
     .hero-box {
       display:grid;
-      grid-template-columns:1.1fr .9fr;
+      grid-template-columns:1fr;
       gap:24px;
       align-items:stretch;
     }
 
     .hero-copy,
-    .hero-side,
     .card,
     .cta-box {
       border-radius:30px;
@@ -159,11 +169,11 @@
     }
 
     .hero-copy {
-      padding:34px;
+      padding:28px;
       display:flex;
       flex-direction:column;
       justify-content:center;
-      min-height:420px;
+      min-height:auto;
     }
 
     .eyebrow {
@@ -171,12 +181,13 @@
       align-items:center;
       gap:10px;
       width:max-content;
+      max-width:100%;
       padding:8px 14px;
       border-radius:999px;
       border:1px solid rgba(239,68,68,.25);
       background:rgba(239,68,68,.08);
       color:#ff9c9c;
-      font-size:12px;
+      font-size:11px;
       text-transform:uppercase;
       letter-spacing:.14em;
       font-weight:700;
@@ -187,34 +198,35 @@
       text-transform:uppercase;
       letter-spacing:.02em;
       margin:0;
+      line-height:1;
     }
 
     .hero-copy h1 {
       margin-top:14px;
-      font-size:clamp(38px, 7vw, 70px);
-      line-height:.92;
+      font-size:clamp(30px, 5vw, 52px);
+      line-height:.95;
     }
 
     .hero-copy h1 span {
       display:block;
       color:#b4bbc4;
-      font-size:clamp(20px, 3.4vw, 30px);
+      font-size:clamp(18px, 2.8vw, 24px);
       margin-top:8px;
     }
 
     .hero-copy p {
-      margin:18px 0 0;
+      margin:16px 0 0;
       color:var(--muted);
-      font-size:15px;
-      line-height:1.7;
-      max-width:700px;
+      font-size:14px;
+      line-height:1.65;
+      max-width:100%;
     }
 
     .hero-actions {
       display:flex;
       flex-wrap:wrap;
       gap:12px;
-      margin-top:28px;
+      margin-top:24px;
       width:100%;
     }
 
@@ -227,10 +239,10 @@
       border-radius:999px;
       text-decoration:none;
       font-weight:700;
-      font-size:14px;
+      font-size:13px;
       border:1px solid transparent;
       transition:.2s ease;
-      min-height:42px;
+      min-height:40px;
       color:#fff;
     }
 
@@ -260,11 +272,11 @@
       display:grid;
       grid-template-columns:repeat(2,1fr);
       gap:14px;
-      margin-top:28px;
+      margin-top:24px;
     }
 
     .hero-point {
-      padding:16px 18px;
+      padding:15px 16px;
       border-radius:20px;
       background:rgba(255,255,255,.03);
       border:1px solid var(--line-soft);
@@ -272,45 +284,20 @@
 
     .hero-point strong {
       display:block;
-      font-size:15px;
+      font-size:14px;
       margin-bottom:6px;
     }
 
-    .hero-point span {
+    .hero-point span,
+    .hero-point li {
       color:var(--muted);
-      font-size:13px;
+      font-size:12.5px;
       line-height:1.6;
     }
 
-    .hero-side {
-      padding:20px;
-      display:flex;
-      flex-direction:column;
-      gap:14px;
-    }
-
-    .side-panel {
-      border-radius:22px;
-      background:rgba(255,255,255,.03);
-      border:1px solid var(--line-soft);
-      padding:18px;
-    }
-
-    .side-panel h3 {
-      font-size:24px;
-      margin-bottom:10px;
-    }
-
-    .side-panel p,
-    .side-panel li {
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.7;
-    }
-
-    .side-panel ul {
-      margin:0;
-      padding-left:18px;
+    .hero-point ul {
+      margin:6px 0 0 18px;
+      padding:0;
     }
 
     .section-head {
@@ -322,15 +309,15 @@
     }
 
     .section-head h2 {
-      font-size:clamp(28px, 4vw, 42px);
+      font-size:clamp(24px, 4vw, 34px);
       line-height:1;
     }
 
     .section-head p {
       margin:0;
       color:var(--muted);
-      font-size:14px;
-      line-height:1.7;
+      font-size:13px;
+      line-height:1.65;
     }
 
     .grid-3 {
@@ -346,19 +333,19 @@
     }
 
     .card {
-      padding:22px;
+      padding:20px;
     }
 
     .card h3 {
-      font-size:24px;
+      font-size:21px;
       margin-bottom:10px;
     }
 
     .card p {
       margin:0;
       color:var(--muted);
-      line-height:1.7;
-      font-size:14px;
+      line-height:1.65;
+      font-size:13px;
     }
 
     .check-list {
@@ -386,40 +373,32 @@
       background:var(--accent-soft);
       color:#ff8c8c;
       flex:0 0 auto;
-      font-size:14px;
+      font-size:13px;
     }
 
     .check strong {
       display:block;
       margin-bottom:4px;
-      font-size:15px;
+      font-size:14px;
       line-height:1.25;
     }
 
     .check p {
       margin:0;
       color:var(--muted);
-      font-size:13px;
+      font-size:12.5px;
       line-height:1.6;
     }
 
     .cta-box {
-      padding:28px;
+      padding:26px;
       text-align:center;
     }
 
     .cta-box h2 {
-      font-size:clamp(30px, 4.4vw, 46px);
+      font-size:clamp(26px, 4vw, 38px);
       line-height:1;
       margin-bottom:12px;
-    }
-
-    .cta-box p {
-      margin:0 auto 22px;
-      color:var(--muted);
-      line-height:1.7;
-      max-width:760px;
-      font-size:15px;
     }
 
     .footer {
@@ -454,7 +433,6 @@
     }
 
     @media (max-width: 1100px) {
-      .hero-box,
       .section-head,
       .grid-3,
       .grid-2 {
@@ -477,15 +455,13 @@
       }
 
       .hero-copy,
-      .hero-side,
       .card,
       .cta-box {
         border-radius:24px;
       }
 
       .hero-copy {
-        padding:24px;
-        min-height:auto;
+        padding:22px;
       }
 
       .hero-actions {
@@ -505,6 +481,14 @@
       .hero-points {
         grid-template-columns:1fr;
       }
+
+      .hero-copy h1 {
+        font-size:34px;
+      }
+
+      .section-head h2 {
+        font-size:28px;
+      }
     }
   </style>
 </head>
@@ -517,18 +501,18 @@
           <img class="brand-logo" src="nealegipenoi.png" alt="Logistik Speed Curier">
           <div>
             <span class="brand-name">Logistik Speed Curier</span>
-            <span class="brand-sub">Service Auto, Diagnoză, Mecanică, Stație ITP</span>
+            <span class="brand-sub">Service Auto, Diagnoza, Mecanica, Statie ITP</span>
           </div>
         </a>
 
         <div class="nav-links">
-          <a href="index.html#acasa">Acasă</a>
+          <a href="index.html#acasa">Acasa</a>
           <a href="index.html#servicii">Servicii</a>
           <a href="index.html#contact">Contact</a>
           <a href="itp.html">ITP</a>
         </div>
 
-        <a class="nav-cta" href="tel:0766799157">Apelează acum</a>
+        <a class="nav-cta" href="tel:0766799157">Apeleaza acum</a>
       </nav>
     </div>
   </header>
@@ -538,82 +522,91 @@
       <div class="container">
         <div class="hero-box">
           <div class="hero-copy">
-            <span class="eyebrow">Stație ITP București Sector 6</span>
-            <h1>Inspecție Tehnică Periodică <span>Rapid, clar, profesionist</span></h1>
-           
+            <span class="eyebrow">Statie ITP Bucuresti Sector 6</span>
+            <h1>Inspectie Tehnica Periodica <span>Rapid, clar, profesionist</span></h1>
+
             <p>
-              Te ajutăm cu programare rapidă, verificări esențiale și îndrumare clară înainte de inspecție, astfel încât mașina ta să fie pregătită pentru un rezultat bun și pentru drumuri sigure.
+              Te ajutam cu programare rapida, verificari esentiale si indrumare clara inainte de inspectie, astfel incat masina ta sa fie pregatita pentru un rezultat bun si pentru drumuri sigure.
             </p>
 
             <div class="hero-actions">
-             
               <a href="#acte-itp" class="btn btn-secondary">Acte necesare</a>
             </div>
-            
 
             <div class="hero-points">
-               <div class="hero-point">
-                <strong>Localizare ușoară</strong>
-                <span>Ajungi rapid la noi din Sector 6 și din zonele apropiate din București.</span>
-              </div>
               <div class="hero-point">
-                <strong>Programare rapidă</strong>
-                <span>Te ajutăm să economisești timp și să ajungi pregătit la inspecție.</span>
+                <strong>Localizare usoara</strong>
+                <span>Ajungi rapid la noi din Sector 6 si din zonele apropiate din Bucuresti.</span>
               </div>
+
               <div class="hero-point">
-                <strong>Verificări esențiale</strong>
-                <span>Frâne, direcție, lumini, anvelope, noxe și alte puncte importante.</span>
+                <strong>Programare rapida</strong>
+                <span>Te ajutam sa economisesti timp si sa ajungi pregatit la inspectie.</span>
               </div>
+
               <div class="hero-point">
-                <strong>Pentru siguranță</strong>
-                <span>ITP nu ține doar de lege, ci și de controlul real al stării tehnice.</span>
+                <strong>Verificari esentiale</strong>
+                <span>Frane, directie, lumini, anvelope, noxe si alte puncte importante.</span>
               </div>
+
               <div class="hero-point">
-                <strong>Când este util să vii înainte</strong>
-                <span>Dacă observi martori în bord, frânare dezechilibrată, lumini slabe, uzură neuniformă la anvelope sau probleme la direcție, este bine să verifici mașina înainte de ITP.</span>
+                <strong>Pentru siguranta</strong>
+                <span>ITP nu tine doar de lege, ci si de controlul real al starii tehnice.</span>
               </div>
+
               <div class="hero-point">
-                <strong>Ce verificăm</strong>
-                <span><li>sistem de frânare</li>
-                <li>direcție și suspensie</li>
-                <li>lumini și semnalizare</li>
-                <li>anvelope și jante</li>
-                <li>emisii și noxe</li>
-                <li>stare generală șasiu și elemente vizibile</li></span>
+                <strong>Cand este util sa vii inainte</strong>
+                <span>Daca observi martori in bord, franare dezechilibrata, lumini slabe, uzura neuniforma la anvelope sau probleme la directie, este bine sa verifici masina inainte de ITP.</span>
+              </div>
+
+              <div class="hero-point">
+                <strong>Ce verificam</strong>
+                <ul>
+                  <li>sistem de franare</li>
+                  <li>directie si suspensie</li>
+                  <li>lumini si semnalizare</li>
+                  <li>anvelope si jante</li>
+                  <li>emisii si noxe</li>
+                  <li>stare generala sasiu si elemente vizibile</li>
+                </ul>
               </div>
             </div>
           </div>
-
+        </div>
+      </div>
+    </section>
 
     <section class="section">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="eyebrow">Prezentare ITP auto</span>
-            <h2>Ce înseamnă ITP și de ce este important</h2>
+            <h2>Ce inseamna ITP si de ce este important</h2>
           </div>
           <p>
-            Inspecția tehnică periodică verifică dacă autovehiculul îndeplinește condițiile tehnice pentru a circula legal și în siguranță. În mod obișnuit sunt evaluate frânele, direcția, luminile, anvelopele și emisiile, iar validarea se face în baza de date RAR.
+            Inspectia tehnica periodica verifica daca autovehiculul indeplineste conditiile tehnice pentru a circula legal si in siguranta. In mod obisnuit sunt evaluate franele, directia, luminile, anvelopele si emisiile.
           </p>
         </div>
 
         <div class="grid-3">
           <div class="card">
-            <h3>Siguranță reală</h3>
+            <h3>Siguranta reala</h3>
             <p>
-              O mașină controlată corect îți oferă mai multă stabilitate, frânare mai bună și un risc mai mic de probleme în trafic.
+              O masina controlata corect iti ofera mai multa stabilitate, franare mai buna si un risc mai mic de probleme in trafic.
             </p>
           </div>
+
           <div class="card">
-            <h3>Circulație legală</h3>
+            <h3>Circulatie legala</h3>
             <p>
-              ITP valabil înseamnă drept de circulație. Fără ITP valabil nu poți circula legal pe drumurile publice din România.
+              ITP valabil inseamna drept de circulatie. Fara ITP valabil nu poti circula legal pe drumurile publice din Romania.
             </p>
           </div>
+
           <div class="card">
-            <h3>Imagine profesională</h3>
+            <h3>Imagine profesionala</h3>
             <p>
-              Pentru site, această pagină pune accent pe cuvinte-cheie relevante pentru Google, fără să piardă stilul premium al brandului tău.
+              Pentru site, aceasta pagina pune accent pe cuvinte-cheie relevante pentru Google, fara sa piarda stilul premium al brandului tau.
             </p>
           </div>
         </div>
@@ -624,44 +617,47 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Verificări ITP</span>
-            <h2>Ce putem verifica pentru mașina ta</h2>
+            <span class="eyebrow">Verificari ITP</span>
+            <h2>Ce putem verifica pentru masina ta</h2>
           </div>
           <p>
-            În stațiile ITP sunt verificate, în mod obișnuit, seria vehiculului, luminile, martorii din bord, anvelopele, elemente de siguranță, frânele, direcția, suspensia și emisiile. Lista de mai jos este adaptată pentru o prezentare clară pe site. 
+            In statiile ITP sunt verificate, in mod obisnuit, seria vehiculului, luminile, martorii din bord, anvelopele, elemente de siguranta, franele, directia, suspensia si emisiile.
           </p>
         </div>
 
         <div class="grid-2">
           <div class="card">
-            <h3>Zone esențiale</h3>
+            <h3>Zone esentiale</h3>
             <div class="check-list">
               <div class="check">
                 <b>01</b>
                 <div>
-                  <strong>Frâne și eficiență la frânare</strong>
-                  <p>Control pentru rulaj sigur, reacție corectă și comportament stabil la oprire.</p>
+                  <strong>Frane si eficienta la franare</strong>
+                  <p>Control pentru rulaj sigur, reactie corecta si comportament stabil la oprire.</p>
                 </div>
               </div>
+
               <div class="check">
                 <b>02</b>
                 <div>
-                  <strong>Direcție, suspensie și rulare</strong>
-                  <p>Verificare pentru stabilitate, confort și eliminarea jocurilor periculoase.</p>
+                  <strong>Directie, suspensie si rulare</strong>
+                  <p>Verificare pentru stabilitate, confort si eliminarea jocurilor periculoase.</p>
                 </div>
               </div>
+
               <div class="check">
                 <b>03</b>
                 <div>
-                  <strong>Instalație de iluminare</strong>
-                  <p>Fază scurtă, fază lungă, semnalizare, stopuri și vizibilitate corectă.</p>
+                  <strong>Instalatie de iluminare</strong>
+                  <p>Faza scurta, faza lunga, semnalizare, stopuri si vizibilitate corecta.</p>
                 </div>
               </div>
+
               <div class="check">
                 <b>04</b>
                 <div>
-                  <strong>Anvelope și jante</strong>
-                  <p>Dimensiuni, stare, uzură și comportament sigur pe drum.</p>
+                  <strong>Anvelope si jante</strong>
+                  <p>Dimensiuni, stare, uzura si comportament sigur pe drum.</p>
                 </div>
               </div>
             </div>
@@ -673,29 +669,32 @@
               <div class="check">
                 <b>05</b>
                 <div>
-                  <strong>Noxe și emisii</strong>
-                  <p>Verificare în raport cu normele aplicabile vehiculului.</p>
+                  <strong>Noxe si emisii</strong>
+                  <p>Verificare in raport cu normele aplicabile vehiculului.</p>
                 </div>
               </div>
+
               <div class="check">
                 <b>06</b>
                 <div>
-                  <strong>Martori în bord</strong>
-                  <p>Semnalele active pot indica probleme care influențează rezultatul inspecției.</p>
+                  <strong>Martori in bord</strong>
+                  <p>Semnalele active pot indica probleme care influenteaza rezultatul inspectiei.</p>
                 </div>
               </div>
+
               <div class="check">
                 <b>07</b>
                 <div>
-                  <strong>Stare caroserie și elemente vizibile</strong>
-                  <p>Aspecte tehnice importante pentru conformitate și siguranță.</p>
+                  <strong>Stare caroserie si elemente vizibile</strong>
+                  <p>Aspecte tehnice importante pentru conformitate si siguranta.</p>
                 </div>
               </div>
+
               <div class="check">
                 <b>08</b>
                 <div>
-                  <strong>Identificare și documentare</strong>
-                  <p>Datele vehiculului și rezultatul inspecției sunt înregistrate conform procedurilor specifice. </p>
+                  <strong>Identificare si documentare</strong>
+                  <p>Datele vehiculului si rezultatul inspectiei sunt inregistrate conform procedurilor specifice.</p>
                 </div>
               </div>
             </div>
@@ -708,11 +707,11 @@
       <div class="container">
         <div class="section-head">
           <div>
-            <span class="eyebrow">Acte și valabilitate</span>
-            <h2>Ce îți recomandăm să ai pregătit</h2>
+            <span class="eyebrow">Acte si valabilitate</span>
+            <h2>Ce iti recomandam sa ai pregatit</h2>
           </div>
           <p>
-            Articolul Autoklass menționează ca documente uzuale talonul, cartea de identitate a vehiculului și actul de identitate al persoanei care se prezintă cu mașina, iar RCA trebuie să fie valabil la data inspecției. :contentReference[oaicite:7]{index=7}
+            Pregateste talonul, cartea de identitate a vehiculului, actul tau de identitate si verifica daca RCA este valabil la data inspectiei.
           </p>
         </div>
 
@@ -720,19 +719,21 @@
           <div class="card">
             <h3>Acte necesare</h3>
             <p>
-              Pregătește certificatul de înmatriculare, CIV și actul de identitate. Pentru unele situații pot exista cerințe suplimentare, în funcție de tipul vehiculului sau de deținător. :contentReference[oaicite:8]{index=8}
+              Pregateste certificatul de inmatriculare, CIV si actul de identitate. Pentru unele situatii pot exista cerinte suplimentare, in functie de tipul vehiculului sau de detinator.
             </p>
           </div>
+
           <div class="card">
-            <h3>Când expiră ITP</h3>
+            <h3>Cand expira ITP</h3>
             <p>
-              În articol sunt prezentate exemple generale de valabilitate, 3 ani pentru mașină nouă, 2 ani pentru anumite vehicule între 3 și 10 ani, anual pentru vehicule mai vechi de 12 ani, cu alte reguli pentru transport persoane sau marfă. Verifică mereu situația exactă a mașinii tale. :contentReference[oaicite:9]{index=9}
+              Valabilitatea difera in functie de tipul si vechimea masinii. Verifica mereu situatia exacta a autovehiculului tau si data trecuta in acte.
             </p>
           </div>
+
           <div class="card">
-            <h3>Înainte de inspecție</h3>
+            <h3>Inainte de inspectie</h3>
             <p>
-              Este util să verifici din timp luminile, frânele, presiunea în roți, eventualii martori din bord și starea generală a mașinii. O pregătire bună îți crește șansele unui rezultat favorabil.
+              Este util sa verifici din timp luminile, franele, presiunea in roti, eventualii martori din bord si starea generala a masinii. O pregatire buna iti creste sansele unui rezultat favorabil.
             </p>
           </div>
         </div>
@@ -742,13 +743,12 @@
     <section class="section">
       <div class="container">
         <div class="cta-box">
-          <h2>Programează-te pentru stația ITP</h2>
-        
+          <h2>Programeaza-te pentru statia ITP</h2>
 
           <div class="hero-actions" style="justify-content:center;">
-            <a href="tel:0766799157" class="btn btn-primary">Apelează acum</a>
-            <a href="https://wa.me/40766799157?text=Bună%20ziua,%20aș%20dori%20o%20programare%20pentru%20ITP." target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
-            <a href="https://waze.com/ul?q=Logistik%20Speed%20Curier%20Bd.%20Timișoara%2092%20Sector%206%20București" target="_blank" rel="noopener" class="btn btn-waze">Navighează cu Waze</a>
+            <a href="tel:0766799157" class="btn btn-primary">Apeleaza acum</a>
+            <a href="https://wa.me/40766799157?text=Buna%20ziua,%20as%20dori%20o%20programare%20pentru%20ITP." target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+            <a href="https://waze.com/ul?q=Logistik%20Speed%20Curier%20Bd.%20Timisoara%2092%20Sector%206%20Bucuresti" target="_blank" rel="noopener" class="btn btn-waze">Navigheaza cu Waze</a>
             <a href="index.html#contact" class="btn btn-secondary">Vezi datele de contact</a>
           </div>
         </div>
@@ -759,9 +759,9 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-row">
-        <small>© Logistik Speed Curier. Stație ITP, Service Auto București, Sector 6.</small>
+        <small>© Logistik Speed Curier. Statie ITP, Service Auto Bucuresti, Sector 6.</small>
         <div class="footer-links">
-          <a href="index.html">Acasă</a>
+          <a href="index.html">Acasa</a>
           <a href="index.html#servicii">Servicii</a>
           <a href="index.html#contact">Contact</a>
           <a href="itp.html">ITP</a>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vopsitorie Auto Bucuresti Sector 6 | Logistik Speed Curier</title>
+  <meta name="description" content="Vopsitorie auto in Bucuresti, Sector 6. Pregatire, vopsire elemente, potrivire culoare si finisaj atent pentru un rezultat curat si profesional." />
+  <meta name="keywords" content="vopsitorie auto Bucuresti, vopsitorie auto Sector 6, revopsire auto, elemente vopsite, reparatii caroserie, polish, lacuire" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:#262626;
+      --bg-soft:#2f2f2f;
+      --panel:#353535;
+      --panel-2:#3d3d3d;
+      --line:#4b4b4b;
+      --line-soft:rgba(255,255,255,.10);
+      --text:#f3f5f7;
+      --muted:#c4c8cf;
+      --muted-2:#9aa1ab;
+      --accent:#ef4444;
+      --accent-soft:rgba(239,68,68,.16);
+      --shadow:0 18px 50px rgba(0,0,0,.30);
+      --radius:24px;
+      --container:min(1180px, calc(100vw - 40px));
+    }
+
+    * { box-sizing:border-box; }
+    html, body {
+      width:100%;
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin:0;
+      color:var(--text);
+      font-family:'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(239,68,68,.08), transparent 18%),
+        linear-gradient(180deg, #262626 0%, #1f1f1f 100%);
+    }
+
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size:56px 56px;
+      opacity:.45;
+      z-index:0;
+    }
+
+    a { color:inherit; }
+    img { max-width:100%; display:block; }
+
+    .container {
+      width:var(--container);
+      margin:0 auto;
+      position:relative;
+      z-index:1;
+    }
+
+    .section { padding:42px 0; }
+
+    .topbar {
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(24,24,24,.84);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .nav {
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:var(--text);
+    }
+
+    .brand-logo {
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      padding:4px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line-soft);
+      object-fit:contain;
+    }
+
+    .brand-name {
+      display:block;
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .brand-sub {
+      display:block;
+      color:var(--muted-2);
+      font-size:12px;
+      margin-top:3px;
+    }
+
+    .nav-links {
+      display:flex;
+      align-items:center;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a {
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .nav-links a:hover { color:var(--text); }
+
+    .nav-cta {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      background:var(--accent);
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 10px 26px rgba(239,68,68,.22);
+    }
+
+    .hero {
+      padding:48px 0 22px;
+    }
+
+    .hero-box,
+    .card,
+    .cta-box,
+    .showcase-card {
+      border-radius:30px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(53,53,53,.96), rgba(33,33,33,.96));
+      box-shadow:var(--shadow);
+    }
+
+    .hero-box {
+      padding:28px;
+    }
+
+    .eyebrow {
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      width:max-content;
+      max-width:100%;
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid rgba(239,68,68,.25);
+      background:rgba(239,68,68,.08);
+      color:#ff9c9c;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      font-weight:700;
+    }
+
+    h1, h2, h3, h4 {
+      font-family:'Rajdhani', sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      margin:0;
+      line-height:1;
+    }
+
+    .hero-box h1 {
+      margin-top:14px;
+      font-size:clamp(30px, 5vw, 52px);
+      line-height:.95;
+    }
+
+    .hero-box h1 span {
+      display:block;
+      color:#b4bbc4;
+      font-size:clamp(18px, 2.8vw, 24px);
+      margin-top:8px;
+    }
+
+    .hero-lead {
+      margin:16px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+      max-width:100%;
+    }
+
+    .hero-grid {
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:18px;
+      margin-top:24px;
+    }
+
+    .hero-info {
+      padding:18px;
+      border-radius:22px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line-soft);
+    }
+
+    .hero-info h3 {
+      font-size:20px;
+      margin-bottom:10px;
+    }
+
+    .hero-info p,
+    .hero-info li {
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+      margin:0;
+    }
+
+    .hero-info ul {
+      margin:0;
+      padding-left:18px;
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+      width:100%;
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:9px 15px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      border:1px solid transparent;
+      transition:.2s ease;
+      min-height:40px;
+      color:#fff;
+    }
+
+    .btn:hover { transform:translateY(-1px); }
+
+    .btn-primary {
+      background:var(--accent);
+      box-shadow:0 12px 28px rgba(239,68,68,.24);
+    }
+
+    .btn-whatsapp { background:#22c55e; }
+    .btn-secondary {
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      border-color:var(--line-soft);
+    }
+
+    .section-head {
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:20px;
+      align-items:end;
+      margin-bottom:18px;
+    }
+
+    .section-head h2 {
+      font-size:clamp(24px, 4vw, 34px);
+      line-height:1;
+    }
+
+    .section-head p {
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .grid-3 {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .card {
+      padding:20px;
+    }
+
+    .card h3 {
+      font-size:21px;
+      margin-bottom:10px;
+    }
+
+    .card p {
+      margin:0;
+      color:var(--muted);
+      line-height:1.65;
+      font-size:13px;
+    }
+
+    .showcase-list {
+      display:grid;
+      gap:18px;
+    }
+
+    .showcase-card {
+      padding:20px;
+    }
+
+    .showcase-head {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:14px;
+    }
+
+    .showcase-head h3 {
+      font-size:22px;
+    }
+
+    .showcase-note {
+      color:var(--muted-2);
+      font-size:12px;
+      font-weight:700;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .before-after-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+
+    .placeholder {
+      min-height:250px;
+      border-radius:22px;
+      border:1px dashed rgba(255,255,255,.18);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)),
+        repeating-linear-gradient(45deg, rgba(255,255,255,.02), rgba(255,255,255,.02) 10px, transparent 10px, transparent 20px);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .placeholder::after {
+      content:"";
+      position:absolute;
+      inset:auto auto 16px 16px;
+      width:60px;
+      height:4px;
+      border-radius:999px;
+      background:rgba(239,68,68,.35);
+      box-shadow:0 0 18px rgba(239,68,68,.20);
+    }
+
+    .placeholder span {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      background:rgba(24,24,24,.72);
+      border:1px solid rgba(255,255,255,.08);
+      backdrop-filter:blur(10px);
+      font-family:'Rajdhani', sans-serif;
+      font-size:28px;
+      font-weight:700;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+      color:var(--text);
+    }
+
+    .showcase-text {
+      margin-top:12px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    .cta-box {
+      padding:26px;
+      text-align:center;
+    }
+
+    .cta-box h2 {
+      font-size:clamp(26px, 4vw, 38px);
+      line-height:1;
+      margin-bottom:12px;
+    }
+
+    .cta-box p {
+      margin:0 auto 20px;
+      color:var(--muted);
+      line-height:1.7;
+      max-width:760px;
+      font-size:14px;
+    }
+
+    .footer {
+      padding:26px 0 56px;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+
+    .footer-row {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links {
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a {
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .footer small {
+      color:var(--muted-2);
+      font-size:13px;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .section-head,
+      .grid-3 {
+        grid-template-columns:1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container { width:min(100vw - 24px, 1180px); }
+
+      .nav {
+        flex-direction:column;
+        align-items:flex-start;
+        padding:14px 0;
+      }
+
+      .nav-links {
+        width:100%;
+        gap:14px;
+      }
+
+      .hero-box,
+      .card,
+      .cta-box,
+      .showcase-card {
+        border-radius:24px;
+      }
+
+      .hero-box,
+      .showcase-card,
+      .cta-box,
+      .card {
+        padding:18px;
+      }
+
+      .hero-actions,
+      .before-after-grid {
+        grid-template-columns:1fr;
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .hero-actions .btn {
+        width:100%;
+        max-width:100%;
+        justify-content:center;
+        text-align:center;
+        white-space:normal;
+        box-sizing:border-box;
+      }
+
+      .placeholder {
+        min-height:180px;
+      }
+
+      .placeholder span {
+        font-size:22px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Logistik Speed Curier">
+          <img class="brand-logo" src="nealegipenoi.png" alt="Logistik Speed Curier">
+          <div>
+            <span class="brand-name">Logistik Speed Curier</span>
+            <span class="brand-sub">Service Auto, Diagnoza, Mecanica, Vopsitorie</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html#acasa">Acasa</a>
+          <a href="index.html#servicii">Servicii</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <a class="nav-cta" href="tel:0766799157">Apeleaza acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <span class="eyebrow">Vopsitorie auto Bucuresti Sector 6</span>
+          <h1>Vopsitorie Auto <span>Pregatire corecta, culoare potrivita, finisaj curat</span></h1>
+          <p class="hero-lead">
+            Oferim servicii de vopsitorie auto pentru elemente afectate de zgarieturi, lovituri usoare sau uzura vizibila. Lucram atent la pregatirea suprafetei, potrivirea nuantei si finisaj, astfel incat rezultatul final sa arate curat si uniform.
+          </p>
+
+          <div class="hero-grid">
+            <div class="hero-info">
+              <h3>Ce putem face</h3>
+              <ul>
+                <li>pregatire element pentru vopsire</li>
+                <li>vopsire partiala sau completa</li>
+                <li>potrivire culoare</li>
+                <li>lac si finisaj</li>
+                <li>retus pentru defecte vizibile</li>
+              </ul>
+            </div>
+
+            <div class="hero-info">
+              <h3>Potrivit pentru</h3>
+              <p>
+                bare, aripi, portiere, capota, elemente cu defecte estetice sau zone care necesita refacere de aspect dupa reparatie.
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#exemple" class="btn btn-secondary">Vezi exemple Inainte / Dupa</a>
+            <a href="tel:0766799157" class="btn btn-primary">Apeleaza acum</a>
+            <a href="https://wa.me/40766799157?text=Buna%20ziua,%20as%20dori%20detalii%20despre%20vopsitorie%20auto." target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Serviciu dedicat</span>
+            <h2>De ce sa alegi pagina de vopsitorie separata</h2>
+          </div>
+          <p>
+            Aceasta subpagina te ajuta sa prezinti clar serviciul de vopsitorie si sa trimiti utilizatorul direct din galerie catre o pagina dedicata. Poti adauga ulterior fotografii reale cu lucrari finalizate, iar structura ramane curata si usor de completat.
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Prezentare clara</h3>
+            <p>
+              Pagina este scurta, usor de parcurs si separa serviciul de vopsitorie de restul serviciilor din site.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Loc pentru exemple</h3>
+            <p>
+              Ai deja pregatita zona pentru 3 exemple Inainte si Dupa. Tu doar inlocuiesti placeholder-ele cu pozele tale.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Aspect consistent</h3>
+            <p>
+              Tema este aliniata cu restul site-ului, ca sa nu existe diferente vizuale cand utilizatorul trece din index in pagina dedicata.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="exemple">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">Exemple de lucrari</span>
+            <h2>Inainte / Dupa</h2>
+          </div>
+          <p>
+            Mai jos ai 3 blocuri pregatite pentru exemplele tale. Acum sunt puse ca placeholder, iar cand ai pozele reale, le inlocuiesti foarte usor.
+          </p>
+        </div>
+
+        <div class="showcase-list">
+          <article class="showcase-card">
+            <div class="showcase-head">
+              <h3>Exemplul 1</h3>
+              <span class="showcase-note">bara sau aripa</span>
+            </div>
+            <div class="before-after-grid">
+              <div class="placeholder"><span>Inainte</span></div>
+              <div class="placeholder"><span>Dupa</span></div>
+            </div>
+            <p class="showcase-text">Poti inlocui aceste 2 spatii cu pozele lucrarii tale reale. Ideal, folosesti acelasi unghi pentru comparatie clara.</p>
+          </article>
+
+          <article class="showcase-card">
+            <div class="showcase-head">
+              <h3>Exemplul 2</h3>
+              <span class="showcase-note">portiera sau capota</span>
+            </div>
+            <div class="before-after-grid">
+              <div class="placeholder"><span>Inainte</span></div>
+              <div class="placeholder"><span>Dupa</span></div>
+            </div>
+            <p class="showcase-text">Aici poti arata o reparatie estetica sau o revopsire partiala, cu accent pe diferenta vizibila dintre starea initiala si rezultatul final.</p>
+          </article>
+
+          <article class="showcase-card">
+            <div class="showcase-head">
+              <h3>Exemplul 3</h3>
+              <span class="showcase-note">element retusat</span>
+            </div>
+            <div class="before-after-grid">
+              <div class="placeholder"><span>Inainte</span></div>
+              <div class="placeholder"><span>Dupa</span></div>
+            </div>
+            <p class="showcase-text">Al treilea exemplu poate fi o lucrare mai complexa, utila pentru a arata consistenta si calitatea finisajului.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Solicita o programare pentru vopsitorie</h2>
+          <p>
+            Daca vrei o estimare sau vrei sa ne trimiti poze cu elementul afectat, ne poti suna sau scrie direct pe WhatsApp.
+          </p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="tel:0766799157" class="btn btn-primary">Apeleaza acum</a>
+            <a href="https://wa.me/40766799157?text=Buna%20ziua,%20as%20dori%20detalii%20despre%20vopsitorie%20auto." target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+            <a href="index.html#contact" class="btn btn-secondary">Vezi contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <small>© Logistik Speed Curier. Vopsitorie auto, Service Auto Bucuresti, Sector 6.</small>
+        <div class="footer-links">
+          <a href="index.html">Acasa</a>
+          <a href="index.html#servicii">Servicii</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

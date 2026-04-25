@@ -733,13 +733,26 @@
       .map-wrap iframe { min-height:420px; }
     }
 
-  @media (max-width: 640px) {
+@media (max-width: 640px) {
+  .hero-banner {
+    padding: 8px;
+    border-radius: 22px;
+  }
+
+  .hero-banner-title {
+    padding: 0;
+    height: auto;
+    min-height: 0;
+  }
+
   .hero-banner-title img {
-    width: 100% !important;
-    height: 240px !important;
-    object-fit: cover !important;
-    object-position: 75% center !important;
-    border-radius: 20px !important;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 18px;
   }
 }
 

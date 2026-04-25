@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Galerie Mecanică Auto București Sector 6 | Logistik Speed Curier</title>
+  <meta name="description" content="Galerie lucrări mecanică auto Logistik Speed Curier București Sector 6. Poze din service, mecanică, diagnoză, tinichigerie, vopsitorie, AC și ITP." />
+  <meta name="keywords" content="galerie mecanică auto București, poze service auto, lucrări mecanică auto, service auto Sector 6, Logistik Speed Curier" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg:#262626;
+      --line:#4b4b4b;
+      --line-soft:rgba(255,255,255,.10);
+      --text:#f3f5f7;
+      --muted:#c4c8cf;
+      --muted-2:#9aa1ab;
+      --accent:#ef4444;
+      --shadow:0 18px 50px rgba(0,0,0,.30);
+      --container:min(1180px, calc(100vw - 40px));
+    }
+
+    * { box-sizing:border-box; }
+
+    html, body {
+      width:100%;
+      overflow-x:hidden;
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin:0;
+      color:var(--text);
+      font-family:'Inter', sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(239,68,68,.08), transparent 18%),
+        linear-gradient(180deg, #262626 0%, #1f1f1f 100%);
+    }
+
+    body::before {
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.02) 1px, transparent 1px);
+      background-size:56px 56px;
+      opacity:.45;
+      z-index:0;
+    }
+
+    a { color:inherit; }
+    img { max-width:100%; display:block; }
+
+    .container {
+      width:var(--container);
+      margin:0 auto;
+      position:relative;
+      z-index:1;
+    }
+
+    .section { padding:42px 0; }
+
+    .topbar {
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(24,24,24,.84);
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+
+    .nav {
+      min-height:76px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand {
+      display:flex;
+      align-items:center;
+      gap:14px;
+      text-decoration:none;
+      color:var(--text);
+    }
+
+    .brand-logo {
+      width:44px;
+      height:44px;
+      border-radius:14px;
+      padding:4px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border:1px solid var(--line-soft);
+      object-fit:contain;
+    }
+
+    .brand-name {
+      display:block;
+      font-size:18px;
+      font-weight:800;
+      letter-spacing:.02em;
+    }
+
+    .brand-sub {
+      display:block;
+      color:var(--muted-2);
+      font-size:12px;
+      margin-top:3px;
+    }
+
+    .nav-links {
+      display:flex;
+      align-items:center;
+      gap:24px;
+      flex-wrap:wrap;
+    }
+
+    .nav-links a {
+      text-decoration:none;
+      color:var(--muted);
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .nav-links a:hover { color:var(--text); }
+
+    .nav-cta {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      background:var(--accent);
+      color:#fff;
+      font-weight:700;
+      box-shadow:0 10px 26px rgba(239,68,68,.22);
+    }
+
+    .hero {
+      padding:48px 0 22px;
+    }
+
+    .hero-box,
+    .gallery-card,
+    .info-box,
+    .cta-box {
+      border-radius:30px;
+      border:1px solid var(--line);
+      background:linear-gradient(180deg, rgba(53,53,53,.96), rgba(33,33,33,.96));
+      box-shadow:var(--shadow);
+    }
+
+    .hero-box {
+      padding:28px;
+    }
+
+    h1, h2, h3 {
+      font-family:'Rajdhani', sans-serif;
+      text-transform:uppercase;
+      letter-spacing:.02em;
+      margin:0;
+      line-height:1;
+    }
+
+    .hero-box h1 {
+      margin-top:0;
+      font-size:clamp(30px, 5vw, 52px);
+      line-height:.95;
+    }
+
+    .hero-box h1 span {
+      display:block;
+      color:#b4bbc4;
+      font-size:clamp(18px, 2.8vw, 24px);
+      margin-top:8px;
+    }
+
+    .hero-lead {
+      margin:16px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+      max-width:100%;
+    }
+
+    .section-head {
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:20px;
+      align-items:end;
+      margin-bottom:18px;
+    }
+
+    .section-head h2 {
+      font-size:clamp(24px, 4vw, 34px);
+      line-height:1;
+    }
+
+    .section-head p {
+      margin:0;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.65;
+    }
+
+    .gallery-grid {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .gallery-card {
+      overflow:hidden;
+      position:relative;
+      min-height:280px;
+      background:#242424;
+    }
+
+    .gallery-card a {
+      display:block;
+      height:100%;
+      text-decoration:none;
+    }
+
+    .gallery-card img {
+      width:100%;
+      height:280px;
+      object-fit:cover;
+      transition:.25s ease;
+      background:#242424;
+    }
+
+    .gallery-card:hover img {
+      transform:scale(1.04);
+    }
+
+    .gallery-caption {
+      position:absolute;
+      left:16px;
+      right:16px;
+      bottom:16px;
+      padding:10px 14px;
+      border-radius:999px;
+      background:rgba(24,24,24,.74);
+      border:1px solid rgba(255,255,255,.10);
+      backdrop-filter:blur(10px);
+      font-size:12px;
+      font-weight:800;
+      color:#fff;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+
+    .info-box {
+      padding:22px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:16px;
+      align-items:start;
+    }
+
+    .info-box h2 {
+      font-size:clamp(24px, 4vw, 34px);
+      margin-bottom:12px;
+    }
+
+    .info-box p {
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    .check-list {
+      display:grid;
+      gap:12px;
+    }
+
+    .check-item {
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.03);
+      border:1px solid var(--line-soft);
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.55;
+    }
+
+    .check-item strong {
+      display:block;
+      color:var(--text);
+      margin-bottom:4px;
+      font-size:14px;
+    }
+
+    .cta-box {
+      padding:26px;
+      text-align:center;
+    }
+
+    .cta-box h2 {
+      font-size:clamp(26px, 4vw, 38px);
+      line-height:1;
+      margin-bottom:12px;
+    }
+
+    .cta-box p {
+      margin:0 auto 20px;
+      color:var(--muted);
+      line-height:1.7;
+      max-width:760px;
+      font-size:14px;
+    }
+
+    .hero-actions {
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:24px;
+      width:100%;
+    }
+
+    .btn {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      padding:9px 15px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:13px;
+      border:1px solid transparent;
+      transition:.2s ease;
+      min-height:40px;
+      color:#fff;
+    }
+
+    .btn-primary {
+      background:var(--accent);
+      box-shadow:0 12px 28px rgba(239,68,68,.24);
+    }
+
+    .btn-whatsapp { background:#22c55e; }
+
+    .btn-secondary {
+      background:rgba(255,255,255,.04);
+      color:var(--text);
+      border-color:var(--line-soft);
+    }
+
+
+    .lightbox {
+      position:fixed;
+      inset:0;
+      z-index:100;
+      display:none;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+      background:rgba(0,0,0,.84);
+      backdrop-filter:blur(10px);
+    }
+
+    .lightbox.open {
+      display:flex;
+    }
+
+    .lightbox img {
+      max-width:min(1100px, 94vw);
+      max-height:86vh;
+      border-radius:24px;
+      border:1px solid rgba(255,255,255,.14);
+      box-shadow:0 22px 70px rgba(0,0,0,.55);
+      object-fit:contain;
+      background:#111;
+    }
+
+    .lightbox-close {
+      position:absolute;
+      top:18px;
+      right:18px;
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(24,24,24,.82);
+      color:#fff;
+      font-size:24px;
+      cursor:pointer;
+      display:grid;
+      place-items:center;
+    }
+
+    .gallery-card button {
+      display:block;
+      width:100%;
+      height:100%;
+      padding:0;
+      border:0;
+      background:transparent;
+      color:inherit;
+      cursor:pointer;
+      text-align:left;
+      font:inherit;
+    }
+
+    .footer {
+      padding:26px 0 56px;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+
+    .footer-row {
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links {
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+    }
+
+    .footer-links a {
+      color:var(--muted);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    .footer small {
+      color:var(--muted-2);
+      font-size:13px;
+    }
+
+    @media (max-width: 1100px) {
+      .section-head,
+      .info-box {
+        grid-template-columns:1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container { width:min(100vw - 24px, 1180px); }
+
+      .nav {
+        flex-direction:column;
+        align-items:flex-start;
+        padding:14px 0;
+      }
+
+      .nav-links {
+        width:100%;
+        gap:14px;
+      }
+
+      .hero-box,
+      .gallery-card,
+      .info-box,
+      .cta-box {
+        border-radius:24px;
+      }
+
+      .hero-box,
+      .info-box,
+      .cta-box {
+        padding:18px;
+      }
+
+      .gallery-grid {
+        grid-template-columns:1fr;
+      }
+
+      .gallery-card img {
+        height:240px;
+      }
+
+      .hero-actions {
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .hero-actions .btn {
+        width:100%;
+        max-width:100%;
+        justify-content:center;
+        text-align:center;
+        white-space:normal;
+        box-sizing:border-box;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Logistik Speed Curier">
+          <img class="brand-logo" src="nealegipenoi.png" alt="Logistik Speed Curier">
+          <div>
+            <span class="brand-name">Logistik Speed Curier</span>
+            <span class="brand-sub">Galerie lucrări, service auto, mecanică</span>
+          </div>
+        </a>
+
+        <div class="nav-links">
+          <a href="index.html#acasa">Acasă</a>
+          <a href="index.html#servicii">Servicii</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+
+        <a class="nav-cta" href="tel:0766799157">Apelează acum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-box">
+          <h1>
+            Galerie mecanică auto
+            <span>Poze din service, lucrări auto și exemple vizuale</span>
+          </h1>
+
+          <p class="hero-lead">
+            Vezi imagini din activitatea Logistik Speed Curier, de la lucrări de mecanică și diagnoză auto, până la tinichigerie, vopsitorie, verificare AC și stație ITP.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galerie">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Poze lucrări și servicii auto</h2>
+          </div>
+          <p>
+            Exemple vizuale din service, utile pentru clienții care vor să vadă tipul de lucrări și serviciile disponibile.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card">
+            <button type="button" onclick="openLightbox('images/poza-mecanica.png', 'Lucrare mecanică auto Logistik Speed Curier')">
+              <img src="images/poza-mecanica.png" alt="Lucrare mecanică auto Logistik Speed Curier" loading="lazy">
+              <div class="gallery-caption">Mecanică auto</div>
+            </button>
+          </article>
+
+          <article class="gallery-card">
+            <button type="button" onclick="openLightbox('images/poza-diagnoza.png', 'Diagnoză computerizată auto Logistik Speed Curier')">
+              <img src="images/poza-diagnoza.png" alt="Diagnoză computerizată auto Logistik Speed Curier" loading="lazy">
+              <div class="gallery-caption">Diagnoză auto</div>
+            </button>
+          </article>
+
+          <article class="gallery-card">
+            <button type="button" onclick="openLightbox('images/poza-ac.png', 'Încărcare freon auto și verificare AC')">
+              <img src="images/poza-ac.png" alt="Încărcare freon auto și verificare AC" loading="lazy">
+              <div class="gallery-caption">AC și freon</div>
+            </button>
+          </article>
+
+          <article class="gallery-card">
+            <button type="button" onclick="openLightbox('images/poza-tinichigerie.png', 'Tinichigerie auto și reparații caroserie')">
+              <img src="images/poza-tinichigerie.png" alt="Tinichigerie auto și reparații caroserie" loading="lazy">
+              <div class="gallery-caption">Tinichigerie</div>
+            </button>
+          </article>
+
+          <article class="gallery-card">
+            <button type="button" onclick="openLightbox('images/poza-vopsitorie.png', 'Vopsitorie auto Logistik Speed Curier')">
+              <img src="images/poza-vopsitorie.png" alt="Vopsitorie auto Logistik Speed Curier" loading="lazy">
+              <div class="gallery-caption">Vopsitorie</div>
+            </button>
+          </article>
+
+          <article class="gallery-card">
+            <button type="button" onclick="openLightbox('images/poza-statieitp.png', 'Stație ITP autorizată Logistik Speed Curier')">
+              <img src="images/poza-statieitp.png" alt="Stație ITP autorizată Logistik Speed Curier" loading="lazy">
+              <div class="gallery-caption">Stație ITP</div>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+<section class="section">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Vrei o programare în service?</h2>
+          <p>
+            Sună-ne sau scrie-ne pe WhatsApp. Spune-ne ce lucrare vrei să faci și te ajutăm cu o programare.
+          </p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="tel:0766799157" class="btn btn-primary">Apelează acum</a>
+            <a href="https://wa.me/40766799157?text=Bună%20ziua,%20aș%20dori%20o%20programare%20în%20service." target="_blank" rel="noopener" class="btn btn-whatsapp">Programare pe WhatsApp</a>
+            <a href="index.html#contact" class="btn btn-secondary">Vezi contact</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <small>© Logistik Speed Curier. Galerie mecanică auto și service auto București, Sector 6.</small>
+        <div class="footer-links">
+          <a href="index.html">Acasă</a>
+          <a href="index.html#servicii">Servicii</a>
+          <a href="index.html#galerie">Galerie</a>
+          <a href="index.html#contact">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" type="button" aria-label="Închide poza" onclick="closeLightbox()">×</button>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+
+  <script>
+    function openLightbox(src, alt) {
+      const lightbox = document.getElementById('lightbox');
+      const image = document.getElementById('lightboxImage');
+      image.src = src;
+      image.alt = alt;
+      lightbox.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox() {
+      const lightbox = document.getElementById('lightbox');
+      const image = document.getElementById('lightboxImage');
+      lightbox.classList.remove('open');
+      image.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeLightbox();
+      }
+    });
+
+    document.getElementById('lightboxImage').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+  </script>
+
+</body>
+</html>

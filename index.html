@@ -628,6 +628,57 @@
 
     #galerie .gallery-card:hover img { transform: scale(1.035); }
 
+    /* ANIMATIE LINKURI / CARDURI CLICKABILE */
+a,
+button,
+.btn,
+.nav-links a,
+.mobile-menu a,
+.brand,
+.service,
+.trust-card,
+.faq-item,
+.contact-item,
+#galerie .gallery-grid > a,
+#galerie .gallery-card {
+  transition:
+    transform .22s ease,
+    box-shadow .22s ease,
+    border-color .22s ease,
+    background .22s ease,
+    color .22s ease;
+}
+
+a:hover,
+button:hover,
+.btn:hover,
+.nav-links a:hover,
+.mobile-menu a:hover,
+.brand:hover,
+.service:hover,
+.trust-card:hover,
+.faq-item:hover,
+.contact-item:hover,
+#galerie .gallery-grid > a:hover .gallery-card {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 55px rgba(0,0,0,.42);
+  border-color: rgba(239,68,68,.45);
+}
+
+.btn:hover,
+.nav-cta:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 16px 34px rgba(239,68,68,.34);
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+#galerie .gallery-grid > a:hover .gallery-card img {
+  transform: scale(1.055);
+}
+
     /* ============================================================
        FOOTER
        ============================================================ */
